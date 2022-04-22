@@ -9,6 +9,7 @@ const NavbarWrapper = styled.header`
   left: 0;
   width: 100%;
   transition: 0.3s;
+  z-index: 1;
 `
 const NavbarContainer = styled.div`
   display: flex;
@@ -44,7 +45,6 @@ const Navbar = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      console.log(windowHeight)
       windowHeight > 80 ? setStickyClass('stickyActive') : setStickyClass('');
     }
   };

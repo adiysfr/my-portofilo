@@ -10,6 +10,7 @@ const HomeWrapper = styled.section`
   background: url(${herobanner}) top center no-repeat;
   background-size: cover;
 	@media (max-width: 991px) {
+    padding: 90px 40px 40px;
     height: auto;
 	}
 ` 
@@ -37,6 +38,9 @@ const Container = styled.div`
       font-size: 30px;
       margin-top: 0;
       margin-bottom: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;   
+      animation: animated-text 3s steps(26,end) 0.2s 1 normal both, blink-caret .5s step-end infinite;
     }
 		@media (max-width: 991px) {
       width: 100%;
@@ -45,6 +49,17 @@ const Container = styled.div`
       width: 100%;
 		}
 	}
+  /* text animation */
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+
+  /* cursor animations */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
 `
 
 const SectionBanner = () => {

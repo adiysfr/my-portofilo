@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import styled from 'styled-components';
-// import browserIcon from "../../assets/images/browser.png"
 import htmlImgIcon from "../../assets/images/htmlss.svg" 
 import cssImgIcon from "../../assets/images/css.png" 
 import reactJsImgIcon from "../../assets/images/react.png" 
+import javascriptIcon from "../../assets/images/javascript.png" 
+import apiImageIcon from "../../assets/images/api.png" 
+import responsiveImageIcon from "../../assets/images/responsive.png" 
+import gitImageIcon from "../../assets/images/git.png" 
+import styledcomponents from "../../assets/images/styledcomponents.png" 
+import sassIcon from "../../assets/images/sass.png" 
+import axiosLogo from "../../assets/images/axios.png" 
 
 const ServicesWrapper = styled.div`
   padding: 60px 0;
   overflow: hidden;
+  @media (max-width: 991px) {
+   padding: 40px 0;
+  }
 `
 const ServicesTitle = styled.div`
   text-align: center;
@@ -45,7 +54,7 @@ const ServicesBox = styled.div`
   text-align: center;
   transition: 0.3s;
   border-radius: 8px;
-  width: 10%;
+  width: 20%;
   display: grid;
   justify-content: center;
   justify-items: center;
@@ -57,6 +66,9 @@ const ServicesBox = styled.div`
   }
   @media (max-width: 767px) {
     width: 100%;
+  }
+  h1{
+    font-size: 20px;
   }
   h1, p{
     color: #606060;
@@ -72,44 +84,62 @@ const ServicesBox = styled.div`
 `
 
 const SectionServices = () => {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      name:"Html 5",
-      desc:"description test",
-      img: htmlImgIcon
-    },
-    {
-      id: 2,
-      name:"Css 3",
-      desc:"description test",
-      img: cssImgIcon
-    },
-    {
-      id: 3,
-      name:"React Js",
-      desc:"description test",
-      img: reactJsImgIcon
-    },
-    {
-      id: 4,
-      name:"test4",
-      desc:"description test",
-      img: reactJsImgIcon
-    },
-    {
-      id: 5,
-      name:"test5",
-      desc:"description test",
-      img: reactJsImgIcon
-    },
-    {
-      id: 6,
-      name:"test6",
-      desc:"description test",
-      img: reactJsImgIcon
-    },
-  ])
+  const [items, setItems] = useState([])
+  useEffect(() => {
+    setItems([
+      {
+        id: 1,
+        name:"Html 5",
+        img: htmlImgIcon
+      },
+      {
+        id: 2,
+        name:"Css 3",
+        img: cssImgIcon
+      },
+      {
+        id: 3,
+        name:"Javascript",
+        img: javascriptIcon
+      },
+      {
+        id: 4,
+        name:"React Js",
+        img: reactJsImgIcon
+      },
+      {
+        id: 5,
+        name:"Styled Components",
+        img: styledcomponents
+      },
+      {
+        id: 6,
+        name:"Integration Rest Api",
+        img: apiImageIcon
+      },
+      {
+        id: 7,
+        name:"Responsive Web Ui",
+        img: responsiveImageIcon
+      },
+      {
+        id: 8,
+        name:"Git Flow",
+        img: gitImageIcon
+      },
+      {
+        id: 9,
+        name:"Sass/Scss",
+        img: sassIcon
+      },
+      {
+        id: 10,
+        name:"Axios",
+        img: axiosLogo
+      },
+    ])
+  }, [])
+  
   return (
     <ServicesWrapper>
       <ServicesTitle>
@@ -124,8 +154,7 @@ const SectionServices = () => {
                 <img src={item.img} alt={item.name}/>
               </div>
               <h1>{item.name}</h1>
-              <p>{item.desc}</p>
-            </ServicesBox>  
+            </ServicesBox> 
           )}
         </ServicesRow>
       </ServicesContainer>

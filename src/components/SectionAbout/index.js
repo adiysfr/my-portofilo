@@ -5,6 +5,9 @@ import adi from "../../assets/images/adi.jpg"
 const SectionAboutWrapper = styled.section`
   padding: 60px 0;
   overflow: hidden;
+  @media (max-width: 991px) {
+   padding: 40px 0;
+  }
 `
 const SectionAboutContainer = styled.div`
   max-width: 1320px;
@@ -70,7 +73,7 @@ const SectionAbout = () => {
           <AboutLeft>
             <h3>About Me</h3>
             <h1>Hello, That's me!</h1>
-            <p>Hello, My name is Adi Yusuf Ramadan. I was born in Jakarta, February 16, 1996. I like to design the web. I am a new and amateur in the frontend development. I am a partial color blind. I like to play skateboarding and play music.</p>
+            <p>Hello, My name is Adi Yusuf Ramadan. I was born in Jakarta, February 16, 1996. I like to design the web. I am a intermediate in the frontend development. I am a partial color blind.</p>
           </AboutLeft>
           <AboutRight>
             <img src={adi} alt="adi"/>
