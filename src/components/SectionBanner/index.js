@@ -1,21 +1,20 @@
 import React from "react";
 import styled from 'styled-components';
 import herobanner from "../../assets/images/hero-bg.png";
-import imgBaner3 from "../../assets/images/image3.svg";
-
 
 const HomeWrapper = styled.section`
 	padding: 40px;
   height: 100vh;
   background: url(${herobanner}) top center no-repeat;
   background-size: cover;
+  overflow: hidden;
 	@media (max-width: 991px) {
-    padding: 90px 40px 40px;
+    padding: 90px 20px 40px;
     height: auto;
 	}
 ` 
 const Container = styled.div`
-  max-width: 1320px;
+  max-width: 1400px;
   display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -32,6 +31,9 @@ const Container = styled.div`
       font-size: 60px;
       margin-top: 0;
       margin-bottom: 0.5rem;
+      @media (max-width: 991px) {
+        font-size: 30px;
+      }
     }
     h2{
       color: #3862c1;
@@ -41,6 +43,10 @@ const Container = styled.div`
       white-space: nowrap;
       overflow: hidden;   
       animation: animated-text 3s steps(26,end) 0.2s 1 normal both, blink-caret .5s step-end infinite;
+      @media (max-width: 991px) {
+        font-size: 20px;
+        white-space: unset;
+      }
     }
 		@media (max-width: 991px) {
       width: 100%;
@@ -49,29 +55,34 @@ const Container = styled.div`
       width: 100%;
 		}
 	}
-  /* text animation */
-  @keyframes animated-text{
-    from{width: 0;}
-    to{width: 472px;}
+  @media (min-width: 1400px) {
+    max-width: 1600px;
   }
+  @media (min-width: 992px) {
+    /* text animation */
+    @keyframes animated-text{
+      from{width: 0;}
+      to{width: 100%;}
+    }
 
-  /* cursor animations */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
+    /* cursor animations */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
   }
 `
 
-const SectionBanner = () => {
+const SectionBanner = ({titleBaner, descriptionBaner, imgBaner}) => {
   return (
     <HomeWrapper>
       <Container>
         <div>
-          <h1>Hello,</h1>
-          <h2>Welcome to my personal website</h2>
+          <h1>{titleBaner}</h1>
+          <h2>{descriptionBaner}</h2>
         </div>
         <div>
-          <img src={imgBaner3} alt="img banner" />
+          <img src={imgBaner} alt="img banner" />
         </div>
       </Container>
     </HomeWrapper>

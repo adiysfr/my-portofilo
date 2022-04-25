@@ -6,7 +6,7 @@ const SectionAboutWrapper = styled.section`
   padding: 60px 0;
   overflow: hidden;
   @media (max-width: 991px) {
-   padding: 40px 0;
+   padding: 0;
   }
 `
 const SectionAboutContainer = styled.div`
@@ -32,6 +32,7 @@ const AboutLeft = styled.div`
   border-radius: 10px;
   @media (max-width: 991px) {
     width: 100%;
+    padding: 20px;
   }
   h3{
     color: #3862c1;

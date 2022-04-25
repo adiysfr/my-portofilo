@@ -1,23 +1,16 @@
 import React, { useState,useEffect } from 'react';
 import styled from 'styled-components';
 
-import htmlImgIcon from "../../assets/images/htmlss.svg" 
-import cssImgIcon from "../../assets/images/css.png" 
-import reactJsImgIcon from "../../assets/images/react.png" 
-import javascriptIcon from "../../assets/images/javascript.png" 
-import apiImageIcon from "../../assets/images/api.png" 
-import responsiveImageIcon from "../../assets/images/responsive.png" 
-import gitImageIcon from "../../assets/images/git.png" 
-import styledcomponents from "../../assets/images/styledcomponents.png" 
-import sassIcon from "../../assets/images/sass.png" 
-import axiosLogo from "../../assets/images/axios.png" 
-import reduxLogo from "../../assets/images/redux.png" 
+import qasirIcon from "../../assets/images/qasir.svg" 
+import sangforIcon from "../../assets/images/sangfor.png" 
+import nuproIcon from "../../assets/images/nupro.png" 
+import nutriIcon from "../../assets/images/nutri.png" 
 
 const ServicesWrapper = styled.div`
   padding: 60px 0;
   overflow: hidden;
   @media (max-width: 991px) {
-   padding: 40px 0;
+   padding: 40px 20px;
   }
 `
 const ServicesTitle = styled.div`
@@ -51,7 +44,6 @@ const ServicesRow = styled.div`
 `
 const ServicesBox = styled.div`
   box-shadow: 2px 0px 14px rgb(1 41 112 / 23%);
-  height: 100%;
   padding: 20px;
   text-align: center;
   transition: 0.3s;
@@ -63,6 +55,10 @@ const ServicesBox = styled.div`
   gap: 10px;
   cursor: pointer;
   border-bottom: 3px solid transparent;
+  div{
+    display: flex;
+    height: 90px;
+  }
   @media (max-width: 991px) {
     width: 20%;
   }
@@ -71,6 +67,7 @@ const ServicesBox = styled.div`
   }
   h1{
     font-size: 20px;
+    height: 55px;
   }
   h1, p{
     color: #606060;
@@ -81,83 +78,55 @@ const ServicesBox = styled.div`
     border-bottom: 3px solid #2db6fa;
   }
   img{
+    width: 100%;
+    align-self: center;
     height: 70px;
   }
 `
 
-const SectionServices = () => {
+const SectionProject = () => {
   const [items, setItems] = useState([])
   useEffect(() => {
     setItems([
       {
         id: 1,
-        name:"Html 5",
-        img: htmlImgIcon
+        name:"Qasir Profile Company",
+        img: qasirIcon
       },
       {
         id: 2,
-        name:"Css 3",
-        img: cssImgIcon
+        name:"Qasir Web App",
+        img: qasirIcon
       },
       {
         id: 3,
-        name:"Javascript",
-        img: javascriptIcon
+        name:"Nutricia Professional",
+        img: nuproIcon
       },
       {
         id: 4,
-        name:"React Js",
-        img: reactJsImgIcon
+        name:"Nutriclub",
+        img: nutriIcon
       },
       {
         id: 5,
-        name:"Styled Components",
-        img: styledcomponents
-      },
-      {
-        id: 6,
-        name:"Integration Rest Api",
-        img: apiImageIcon
-      },
-      {
-        id: 7,
-        name:"Responsive Web Ui",
-        img: responsiveImageIcon
-      },
-      {
-        id: 8,
-        name:"Git Flow",
-        img: gitImageIcon
-      },
-      {
-        id: 9,
-        name:"Sass/Scss",
-        img: sassIcon
-      },
-      {
-        id: 10,
-        name:"Axios",
-        img: axiosLogo
-      },
-      {
-        id: 11,
-        name:"Redux",
-        img: reduxLogo
-      },
+        name:"Sangfor",
+        img: sangforIcon
+      }
     ])
   }, [])
   
   return (
     <ServicesWrapper>
       <ServicesTitle>
-        <h1>My Stack</h1>
-        <h3>what is my stack?</h3>
+        <h1>My Projects</h1>
+        <h3>Here are some projects I've worked on</h3>
       </ServicesTitle>
       <ServicesContainer>
         <ServicesRow>
           {items.map(item => 
             <ServicesBox key={item.id}>
-              <div style={{height: "90px"}}>
+              <div>
                 <img src={item.img} alt={item.name}/>
               </div>
               <h1>{item.name}</h1>
@@ -169,4 +138,4 @@ const SectionServices = () => {
   )
 }
 
-export default SectionServices
+export default SectionProject

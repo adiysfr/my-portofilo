@@ -1,15 +1,50 @@
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
 }
 :root {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .stickyActive{
   background: rgba(150, 180, 255, 0.23);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.8px);
   -webkit-backdrop-filter: blur(10.8px);
 }
+
+.show{
+  display: block !important;
+}
+
+.hamburger{
+  background-color: #7d99d7;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  backdrop-filter: blur(10.8px);
+}
+.hamburger .line{
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-block: 7px; 
+  border-radius: 4px;
+  transition: transform .5s,
+  opacity .25s;
+}
+.hamburger.active .line:nth-child(1){
+  transform: translateY(10px)
+  rotate(45deg); 
+}
+.hamburger.active .line:nth-child(2){
+  opacity: 0; 
+}
+.hamburger.active .line:nth-child(3){
+  transform: translateY(-10px)
+  rotate(-45deg); 
+}  
