@@ -2,4 +2,8 @@
 
 - under development
 
-# Under development . . .
+# Live Demo
+
+https://adiysfr.netlify.app/ 
+or
+http://adiysr-profile.herokuapp.com/
