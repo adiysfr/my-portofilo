@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import contactBg from "../../assets/images/contact-bg.jpg"
 import ContactsIcon from '@mui/icons-material/Contacts';
-import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import PublicIcon from '@mui/icons-material/Public';
 
 const GetInTouchWrapper = styled.div`
   background: linear-gradient(to right,rgb(44 44 44 / 10%),rgb(49 59 81)),url(${contactBg});
