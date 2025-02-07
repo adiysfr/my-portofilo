@@ -23,9 +23,9 @@ const Contact = () => {
           descriptionBaner={data.descriptionBaner}
           imgBaner={data.imgBaner}/>
       </Fade>
-      <Fade bottom>
-        <GetInTouch/>
-      </Fade>
+      // <Fade bottom>
+      //   <GetInTouch/>
+      // </Fade>
     </MainLayout>
   );
 };
