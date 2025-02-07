@@ -67,16 +67,16 @@ const GetInTouch = () => {
             <ContactsIcon/>
             <div>
               <h2>Address</h2>
-              <h3>Jalan Gamprit 4 Jatiwaringin, Pondok Gede, Bekasi 17411</h3>
+              <h3>Bekasi, Indonesia</h3>
             </div>
           </ContactItem>
-          <ContactItem>
-            <PermPhoneMsgIcon/>
-            <div>
-              <h2>Phone</h2>
-              <h3>089525871648</h3>
-            </div>
-          </ContactItem>
+          // <ContactItem>
+          //   <PermPhoneMsgIcon/>
+          //   <div>
+          //     <h2>Phone</h2>
+          //     <h3>089525871648</h3>
+          //   </div>
+          // </ContactItem>
           <ContactItem>
             <ContactMailIcon/>
             <div>
@@ -84,13 +84,13 @@ const GetInTouch = () => {
               <h3>adiyusuframadhan@gmail.com</h3>
             </div>
           </ContactItem>
-          <ContactItem>
-            <PublicIcon/>
-            <div>
-              <h2>Social Media</h2>
-              <h3>adiyusuframadhan@gmail.com</h3>
-            </div>
-          </ContactItem>
+          // <ContactItem>
+          //   <PublicIcon/>
+          //   <div>
+          //     <h2>Social Media</h2>
+          //     <h3>adiyusuframadhan@gmail.com</h3>
+          //   </div>
+          // </ContactItem>
         </Contact>
       </Container>
     </GetInTouchWrapper>
